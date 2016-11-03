@@ -1,4 +1,4 @@
-﻿Shader "Custom/5_4CubeMap2" {
+﻿Shader "Custom/5_5CubeNormal2" {
 	Properties {
         _Cube ("CubeMap", Cube) = "" {}
 	}
@@ -20,10 +20,7 @@
                 v2f o;
                 o.pos = mul(UNITY_MATRIX_MVP, v);
 
-                float3 viewDir = normalize(ObjSpaceViewDir(v));
-                float3 r = reflect(-viewDir, n);
-                r = mul(UNITY_MATRIX_MV, float4(r, 0));
-                o.uv = r;
+                o.uv = mul(UNITY_MATRIX_MV, n);
 
                 return o;
             }
