@@ -20,7 +20,7 @@
                 v2f o;
                 o.pos = mul(UNITY_MATRIX_MVP, v);
 
-                o.uv = mul(UNITY_MATRIX_MV, n);
+                o.uv = mul((float3x3)UNITY_MATRIX_MV, n);
 
                 return o;
             }
