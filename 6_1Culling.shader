@@ -1,4 +1,4 @@
-﻿Shader "Custom/6Culling" {
+﻿Shader "Custom/6_1Culling" {
 	Properties {
 		_Color ("Color", Color) = (1, 1, 1, 1)
 	}
