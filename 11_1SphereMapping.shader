@@ -49,8 +49,9 @@
 
 			float4 frag(v2f i): COLOR {
 				float4 reflectiveColor = tex2D(_Environment, i.uv2);
-				float4 decalColor = tex2D(_MainTex, i.uv);
-				return lerp(decalColor, reflectiveColor, _Reflectivity);
+				// float4 decalColor = tex2D(_MainTex, i.uv);
+				// return lerp(decalColor, reflectiveColor, _Reflectivity);
+				return reflectiveColor;
 			}
 
 			ENDCG
